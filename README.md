@@ -13,7 +13,7 @@
 ## Demo
 
 ### App
-https://github.com/user-attachments/assets/your-app-video.mp4
+https://github.com/user-attachments/assets/6025b9ac-0588-41e5-81b9-37d1c1258d9a
 
 ### LangSmith Observability
 https://github.com/user-attachments/assets/your-langsmith-video.mp4
