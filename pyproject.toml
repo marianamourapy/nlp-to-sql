@@ -1,0 +1,30 @@
+[project]
+name = "nlp-to-sql"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "Your Name",email = "you@example.com"}
+]
+readme = "README.md"
+requires-python = ">=3.14,<4.0.0"
+dependencies = [
+    "sqlparse (>=0.5.5,<0.6.0)",
+    "openai (>=2.24.0,<3.0.0)",
+    "python-dotenv (>=1.2.1,<2.0.0)",
+    "groq (>=0.30.0,<1.0.0)",
+    "fastapi (>=0.134.0,<0.135.0)",
+    "uvicorn (>=0.41.0,<0.42.0)",
+    "streamlit (>=1.54.0,<2.0.0)",
+    "langgraph (>=1.0.10,<2.0.0)",
+    "langchain-groq (>=1.1.2,<2.0.0)",
+    "sqlalchemy (>=2.0.48,<3.0.0)",
+    "psycopg2-binary (>=2.9.11,<3.0.0)",
+    "google-generativeai (>=0.8.6,<0.9.0)"
+]
+
+[tool.poetry]
+packages = [{include = "nlp_to_sql", from = "src"}]
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
