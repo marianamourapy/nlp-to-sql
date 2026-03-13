@@ -8,16 +8,6 @@
   <em>This is v1 — the foundation of a larger application. See <a href="#roadmap">Roadmap</a> for what's coming next.</em>
 </p>
 
----
-
-## Demo
-
-### App
-https://github.com/user-attachments/assets/your-app-video.mp4
-
-### LangSmith Observability
-https://github.com/user-attachments/assets/your-langsmith-video.mp4
-
 <p align="center">
   <img src="https://img.shields.io/badge/python-3.12+-blue?style=flat-square&logo=python&logoColor=white" alt="Python">
   <img src="https://img.shields.io/badge/LangGraph-0.2-green?style=flat-square" alt="LangGraph">
@@ -28,7 +18,13 @@ https://github.com/user-attachments/assets/your-langsmith-video.mp4
   <img src="https://img.shields.io/badge/license-MIT-lightgrey?style=flat-square" alt="License">
 </p>
 
----
+## Demo
+
+### App
+https://github.com/user-attachments/assets/6025b9ac-0588-41e5-81b9-37d1c1258d9a
+
+### LangSmith Observability
+<img width="1612" height="787" alt="Image" src="https://github.com/user-attachments/assets/af83d243-e935-4d42-ac14-836a2a6125b3" />
 
 ## Example
 
@@ -43,8 +39,6 @@ The best way to understand what this project does is to see conversational memor
 > **Assistant:** Carol White is from Albuquerque, NM. David Brown is from San Francisco, CA.
 
 The second question contains no subject. The pipeline rewrites it internally as *"where are the customers who never bought a Macbook from?"* before generating SQL — no hardcoded logic, just context resolution.
-
----
 
 ## How It Works
 
@@ -65,8 +59,6 @@ Every question goes through a multi-step pipeline orchestrated by LangGraph:
 | `reject_write_operation` | Rejects INSERT, UPDATE, DELETE and other write operations |
 | `reject_invalid_sql` | Rejects queries that fail validation |
 
----
-
 ## Features
 
 - **Conversational memory** — follow-up questions are resolved using previous context
@@ -76,8 +68,6 @@ Every question goes through a multi-step pipeline orchestrated by LangGraph:
 - **Observability** — full LangSmith tracing for every pipeline run
 - **REST API** — FastAPI backend exposes the pipeline as an endpoint
 - **Containerized** — Docker Compose setup for running the full stack locally
-
----
 
 ## Tech Stack
 
@@ -92,8 +82,6 @@ Every question goes through a multi-step pipeline orchestrated by LangGraph:
 | ORM | [SQLAlchemy](https://www.sqlalchemy.org) |
 | Containers | [Docker](https://www.docker.com) |
 | Dependency Management | [Poetry](https://python-poetry.org) |
-
----
 
 ## Project Structure
 
@@ -128,8 +116,6 @@ nlp-to-sql/
 ├── docker-compose.yml
 └── Dockerfile
 ```
-
----
 
 ## Getting Started
 
@@ -177,8 +163,6 @@ poetry run uvicorn app.api:app --reload
 
 The project was designed to avoid hardcoded values. LLM models, database connections, and schema configuration are all set via environment variables and `core/config.py` — so swapping Groq for another provider, or pointing to a different PostgreSQL database, requires no changes to the pipeline logic itself.
 
----
-
 ## Running with Docker
 
 ```bash
@@ -189,8 +173,6 @@ docker compose up --build
 - FastAPI: http://localhost:8000
 
 > Requires Docker Desktop installed.
-
----
 
 ## Environment Variables
 
@@ -209,8 +191,6 @@ cp .env.example .env
 | `LANGCHAIN_API_KEY` | LangSmith API key |
 | `LANGCHAIN_TRACING_V2` | Set to `true` to enable tracing |
 | `LANGCHAIN_ENDPOINT` | LangSmith endpoint |
-
----
 
 ## Example Queries
 
@@ -260,8 +240,6 @@ update the client table with a new client
 → This application currently supports read-only queries. INSERT, UPDATE and DELETE operations are not available in this version.
 ```
 
----
-
 ## Roadmap
 
 <a name="roadmap"></a>
@@ -277,8 +255,6 @@ Some of the directions planned for future versions:
 - **Write operations** — extend the pipeline to handle `UPDATE` and `DELETE` queries safely, with confirmation steps and rollback support
 - **Authentication & multi-user** — user accounts, sessions, and per-user database connections
 - **Security hardening** — role-based access control, query sanitization, and audit logging for production use
-
----
 
 ## License
 
